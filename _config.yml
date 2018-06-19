@@ -1,0 +1,64 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num" #pagination generated sub path format
+#pygments: true #for support {% highlight %}
+highlighter: pygments
+markdown: kramdown #use kramdown to parse markdown
+encoding: utf-8
+
+collections:
+  ssgithubPage:
+    title: "Github建站系列教程"
+    output: true
+  ssh5Training:
+    title: "Html5系列教程"
+    output: true
+  ssstorageInDeep:
+    title: "《大话存储》存储技术系列笔记"
+    output: true
+
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: "P_Chou Tech Space"
+  -
+    scope:
+      path: ""
+      type: "ssh5Training"
+    values:
+      layout: "postlayout"
+  -
+    scope:
+      path: ""
+      type: "ssstorageInDeep"
+    values:
+      layout: "postlayout"
+  -
+    scope:
+      path: ""
+      type: "ssgithubPage"
+    values:
+      layout: "postlayout"
+
+
+description: "P_Chou Tech Space, share technology post"
+author:
+  name: P_Chou
+  email: dbyll@ismaildemirbilek.com
+  github: dbtek
+  twitter: dbtek
+  pinterest: asd123
+  linkedin: asd123
+  bio: Do not build on quicksand high
+
+rss_path: feed.xml
+categories_path: category.html
+tags_path: tag.html
+
+BASE_PATH:
+
+gems: [jekyll-paginate]
